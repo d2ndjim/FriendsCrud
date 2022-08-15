@@ -1,23 +1,25 @@
-<div id="friends">
-  <table class="table table-striped table-bordered table-hover">
-    <thead class="table-dark">
-      <tr>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Twitter</th>
-        <th scope="col">User ID</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @friends.each do |friend| %>
-        <%= render friend %>
-      <% end %>
-    </tbody>
-  </table>
+<% if user_signed_in? %>
+  <div id="friends">
+    <table class="table table-striped table-bordered table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Twitter</th>
+          <th scope="col">User ID</th>
+          <th> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @friends.each do |friend| %>
+          <%= render friend %>
+        <% end %>
+      </tbody>
+    </table>
 
-  <%= link_to 'New Friend', new_friend_path, class:"btn btn-secondary" %>
-</div>
-
-
+    <%= link_to 'New Friend', new_friend_path, class:"btn btn-secondary" %>
+  </div>
+<% else %>
+  <h1>Hello World!</h1>
+<% end %>
