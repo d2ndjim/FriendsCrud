@@ -1,10 +1,13 @@
 <div id="<%= dom_id friend %>">
-  <tr>
-    <td><%= friend.first_name %></td>
-    <td><%= friend.last_name %></td>
-    <td><%= friend.email %></td>
-    <td><%= friend.phone %></td>
-    <td><%= friend.twitter %></td>
-    <td><%= link_to "Show friend", friend, class:"btn btn-secondary" %></td>
-  </tr>
+  <% if friend.user == current_user %>
+    <tr>
+      <td><%= friend.first_name %></td>
+      <td><%= friend.last_name %></td>
+      <td><%= friend.email %></td>
+      <td><%= friend.phone %></td>
+      <td><%= friend.twitter %></td>
+      <td><%= friend.user_id %></td>
+      <td><%= link_to "Show friend", friend, class:"btn btn-secondary" %></td>
+    </tr>
+  <% end %>
 </div>
