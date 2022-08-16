@@ -1,24 +1,7 @@
-# README
+# FRIENDS  APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This Applications helps different users keep track of friends list. A user can log in, sign up, add friend, edit friend and delete friend.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Built with
+- Ruby on Rails 
+- Bootstrap
